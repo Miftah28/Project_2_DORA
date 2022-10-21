@@ -11,42 +11,42 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-menu-button-wide"></i><span>Donor Darah</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="components-alerts.html">
-                        <i class="bi bi-circle"></i><span>Alerts</span>
+                        <i class="bi bi-circle"></i><span>Kegitaan</span>
                     </a>
                 </li>
                 <li>
                     <a href="components-accordion.html">
-                        <i class="bi bi-circle"></i><span>Accordion</span>
+                        <i class="bi bi-circle"></i><span>Daftar Perserta</span>
                     </a>
                 </li>
             </ul>
-        </li><!-- End Components Nav -->
+        </li><!-- End Donor Darah Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="users-profile.html">
                 <i class="bi bi-person"></i>
-                <span>Profile</span>
+                <span>Stok Darah</span>
             </a>
-        </li><!-- End Profile Page Nav -->
+        </li><!-- End Stok Darah Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="users-profile.html">
                 <i class="bi bi-person"></i>
-                <span>Profile</span>
+                <span>Masyarakat</span>
             </a>
-        </li><!-- End Profile Page Nav -->
+        </li><!-- End Masyarakat Nav -->
         
         <li class="nav-item">
             <a class="nav-link collapsed" href="users-profile.html">
                 <i class="bi bi-person"></i>
-                <span>Profile</span>
+                <span>Transaksi</span>
             </a>
-        </li><!-- End Profile Page Nav -->
+        </li><!-- End Transaksi Nav -->
 
     </ul>
 
