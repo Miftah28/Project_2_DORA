@@ -2,18 +2,31 @@
 
     <div class="d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
+<<<<<<< HEAD
             <img src="assets/img/dora.png" alt="">
             <span class="d-none d-lg-block">DORA</span>
+=======
+            <img src="assets/img/logo.png" alt="">
+            <span class="d-none d-lg-block">NiceAdmin</span>
+>>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
+<<<<<<< HEAD
     {{-- <div class="search-bar">
+=======
+    <div class="search-bar">
+>>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
         <form class="search-form d-flex align-items-center" method="POST" action="#">
             <input type="text" name="query" placeholder="Search" title="Enter search keyword">
             <button type="submit" title="Search"><i class="bi bi-search"></i></button>
         </form>
+<<<<<<< HEAD
     </div><!-- End Search Bar --> --}}
+=======
+    </div><!-- End Search Bar -->
+>>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
 
     <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
@@ -24,7 +37,11 @@
                 </a>
             </li><!-- End Search Icon-->
 
+<<<<<<< HEAD
             {{-- <li class="nav-item dropdown">
+=======
+            <li class="nav-item dropdown">
+>>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
 
                 <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                     <i class="bi bi-bell"></i>
@@ -163,7 +180,11 @@
 
                 </ul><!-- End Messages Dropdown Items -->
 
+<<<<<<< HEAD
             </li><!-- End Messages Nav --> --}}
+=======
+            </li><!-- End Messages Nav -->
+>>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
 
             <li class="nav-item dropdown pe-3">
 

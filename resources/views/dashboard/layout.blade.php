@@ -37,9 +37,12 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+<<<<<<< HEAD
 <!-- Table example -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+=======
+>>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
 </head>
 
 <body>
@@ -64,6 +67,7 @@
     <script src="assets/vendor/quill/quill.min.js"></script>
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<<<<<<< HEAD
     <script src="assets/vendor/php-email-form/validate.js"></script><script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
@@ -72,6 +76,9 @@
             $('#table').DataTable();
         });
     </script>
+=======
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+>>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
