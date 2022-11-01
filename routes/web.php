@@ -23,3 +23,4 @@ Route::get('/dashboard', function () {
 });
 
 Route::resource('stokdarah',StokdarahController::class);
+

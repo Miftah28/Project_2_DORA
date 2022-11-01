@@ -37,7 +37,20 @@ class StokdarahController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $request -> validate([
+            'goldar' => 'required|min:1|max:3',
+            'stok' => 'required|min:1|max:3',
+            'tglupdatestok' => 'required'
+        ]);
+
+        $stokdarah = new Stokdarah;
+        $stokdarah ->goldar = $request->goldar;
+        $stokdarah ->stok = $request->stok;
+        $stokdarah ->tglupdatestok = $request->tglupdatestok;
+        $stokdarah -> save();
+
+        return to_route('stokdarah.index')->with('success','Data saved');
     }
 
     /**
@@ -48,7 +61,7 @@ class StokdarahController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -59,7 +72,9 @@ class StokdarahController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('stokdarah.index')->with([
+            'stokdarah' => Stokdarah::find($id),
+        ]);
     }
 
     /**
@@ -71,7 +86,19 @@ class StokdarahController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request -> validate([
+            'goldar' => 'required|min:1|max:3',
+            'stok' => 'required|min:1|max:3',
+            'tglupdatestok' => 'required'
+        ]);
+
+        $stokdarah = Stokdarah::find($id);
+        $stokdarah ->goldar = $request->goldar;
+        $stokdarah ->stok = $request->stok;
+        $stokdarah ->tglupdatestok = $request->tglupdatestok;
+        $stokdarah -> save();
+
+        return to_route('stokdarah.index',$stokdarah->id)->with('success','Data saved');
     }
 
     /**
