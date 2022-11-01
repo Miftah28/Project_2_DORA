@@ -1,9 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 use App\Http\Controllers\StokdarahController;
-=======
->>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login.index');
 });
-<<<<<<< HEAD
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
@@ -28,5 +24,3 @@ Route::get('/dashboard', function () {
 
 Route::resource('stokdarah',StokdarahController::class);
 
-=======
->>>>>>> 1ea8709ab44537b76dbe72654ebbf3e157016e82
