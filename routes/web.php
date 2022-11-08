@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\StokdarahController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,6 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::resource('stokdarah',StokdarahController::class);
+Route::get('stokdarah',[ StokdarahController::class, 'index']);
 
+Route::get('masyarakat',[ MasyarakatController::class, 'index']);

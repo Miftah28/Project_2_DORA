@@ -33,7 +33,7 @@
         </li><!-- End Donor Darah Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="stokdarah">
+            <a class="nav-link collapsed" href="{{url('stokdarah')}}">
                 <i class='bx bxs-droplet' ></i>
                 <span>Stok Darah</span>
             </a>

@@ -16,8 +16,11 @@ return new class extends Migration
         Schema::create('stokdarahs', function (Blueprint $table) {
             $table->id();
             $table->string('goldar');
-            $table->integer('stok');
-            $table->date('tglupdatestok');
+            $table->integer('wb');
+            $table->integer('prc');
+            $table->integer('t');
+            $table->integer('ffp');
+            $table->dateTime('tglupdatestok');
             $table->timestamps();
         });
     }

@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Stokdarah extends Model
 {
     use HasFactory;
-    protected $table ='stokdarahs';
-    protected $guarded = ['id'];
+    protected $table = 'stokdarahs';
+    protected $fillable = [
+        'goldar',
+        'wb',
+        'prc',
+        't',
+        'ffp',
+        'tglupdatestok',
+    ];
 }
