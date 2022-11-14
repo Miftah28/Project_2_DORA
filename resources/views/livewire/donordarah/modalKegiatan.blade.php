@@ -112,7 +112,7 @@
             <div class="modal-body">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Modal Update kegiatan</h5>
+                        <h5 class="card-title text-center">Modal Delete kegiatan</h5>
                         <!-- No Labels Form -->
                         <form class="row g-3" wire:submit.prevent="destroykegiatan">
 
