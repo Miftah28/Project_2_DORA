@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DatadonorController;
 use App\Http\Controllers\StokdarahController;
 use App\Http\Controllers\MasyarakatController;
 
@@ -31,6 +32,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function(){
     Route::get("dashboard",[DashboardController::class,'adminHome'])->name('home.admin');
     Route::get('stokdarah',[ StokdarahController::class, 'index']);
     Route::get('kegiatan',[ KegiatanController::class, 'index']);
+    Route::get('datadonor',[ DatadonorController::class, 'index']);
     Route::get('masyarakat',[ MasyarakatController::class, 'index']);
 });
 

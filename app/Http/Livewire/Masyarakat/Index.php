@@ -22,9 +22,9 @@ class Index extends Component
     {
         return [
             'name' => 'required|string|max:255',
-            'nik' => 'required|integer',
-            'notelp' => 'required|integer',
-            'alamat' => 'required|string|max:255',
+            'nik' => '',
+            'notelp' => '',
+            'alamat' => '',
             'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:8',
             'role' => 'required|integer|min:0'
@@ -47,8 +47,9 @@ class Index extends Component
             'alamat' => $validatedData['alamat'],
             'email' => $validatedData['email'],
             'password' => Hash::make($validatedData['password']),
+            'role' => $validatedData['role'],
         ]);
-        Session()->flash('message', 'Stok darah added successfully');
+        Session()->flash('message', 'Masyarakat added successfully');
         $this->dispatchBrowserEvent('close-modal');
         $this->resetInput();
     }
@@ -67,7 +68,7 @@ class Index extends Component
             'password' => Hash::make($validatedData['password']),
             'role' => $validatedData['role'],
         ]);
-        Session()->flash('message', 'Stok darah updated successfully');
+        Session()->flash('message', 'Masyarkat updated successfully');
         $this->dispatchBrowserEvent('close-modal');
         $this->resetInput();
     }
@@ -97,7 +98,7 @@ class Index extends Component
     public function destroymasyarakat()
     {
         User::find($this->masyarakat_id)->delete();
-        Session()->flash('message', 'Stok darah deleted successfully');
+        Session()->flash('message', 'Masyarkat deleted successfully');
         $this->dispatchBrowserEvent('close-modal');
     }
 
