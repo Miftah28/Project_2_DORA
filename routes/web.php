@@ -34,6 +34,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function(){
     Route::get('kegiatan',[ KegiatanController::class, 'index']);
     Route::get('datadonor',[ DatadonorController::class, 'index']);
     Route::get('masyarakat',[ MasyarakatController::class, 'index']);
+    Route::get('transaksi',[ TransaksiController::class, 'index']);
 });
 
 Route::middleware(['auth', 'user-role:masyarakat'])->group(function(){
