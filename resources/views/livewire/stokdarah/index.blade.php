@@ -6,7 +6,7 @@
         </div>
     @endif
     @include('livewire.stokdarah.modal')
-    <div class="card-body">
+    <div class="card-body overflow-auto">
         <h1 class="card-title text-center">STOK DARAH</h1>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary text-center mb-2" data-bs-toggle="modal"

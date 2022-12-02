@@ -6,7 +6,7 @@
         </div>
     @endif
     @include('livewire.donordarah.modaldatadonor')
-    <div class="card-body">
+    <div class="card-body overflow-auto">
         <h1 class="card-title text-center">DATA DONOR</h1>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary text-center mb-2" data-bs-toggle="modal"
@@ -20,12 +20,12 @@
             <thead>
                 <tr>
                     <th class="text-center" scope="col">No</th>
-                    <th class="text-center" scope="col">nama</th>
-                    <th class="text-center" scope="col">umur</th>
-                    <th class="text-center" scope="col">goldar</th>
-                    <th class="text-center" scope="col">tensi</th>
-                    <th class="text-center" scope="col">bb</th>
-                    <th class="text-center" scope="col">kt</th>
+                    <th class="text-center" scope="col">Nama Lengkap</th>
+                    <th class="text-center" scope="col">Umur/Usia</th>
+                    <th class="text-center" scope="col">Golongan Darah</th>
+                    <th class="text-center" scope="col">Tensi</th>
+                    <th class="text-center" scope="col">Berat Badan</th>
+                    <th class="text-center" scope="col">Keterangan</th>
                     <th class="text-center" scope="col">Aksi</th>
                 </tr>
             </thead>

@@ -120,7 +120,7 @@ class Index extends Component
 
     public function render()
     {
-        $masyarakats = User::where('name', 'like', '%'.$this->search.'%')->orderBy('id', 'ASC')->paginate(10);
+        $masyarakats = User::where('name', 'like', '%'.$this->search.'%' )->orderBy('id', 'ASC')->paginate(10);
         return view('livewire.masyarakat.index', ['masyarakats' => $masyarakats]);
     }
 }

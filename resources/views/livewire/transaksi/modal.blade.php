@@ -1,22 +1,22 @@
-<!-- Modal create stok darah -->
-<div wire:ignore.self class="modal fade" id="createmasyarakatModal" tabindex="-1" aria-labelledby="createmasyarakatLabel"
+<!-- Modal create trsansaksi -->
+<div wire:ignore.self class="modal fade" id="createtransaksiModal" tabindex="-1" aria-labelledby="createtransaksiLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="createmasyarakatModalLabel">Modal MASYARAKAT</h1>
+                <h1 class="modal-title fs-5" id="createtransaksiModalLabel">Modal Transaksi</h1>
                 <button type="button" class="btn-close" wire:click="closemodal" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Modal Create Masyarakat</h5>
+                        <h5 class="card-title text-center">Modal Create Transaksi</h5>
                         <!-- No Labels Form -->
-                        <form class="row g-3" wire:submit.prevent="savemasyarakat">
+                        <form class="row g-3" wire:submit.prevent="savetransaksi">
                             <div class="col-md-12">
-                                <input type="text" wire:model="name" class="form-control" placeholder="Nama Lengkap">
-                                @error('name')
+                                <input type="text" wire:model="nama" class="form-control" placeholder="Nama Lengkap">
+                                @error('nama')
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -33,29 +33,40 @@
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="col-md-12">
-                                <input type="text" wire:model="alamat" class="form-control" placeholder="alamat">
-                                @error('alamat')
+                            <div class="col-md-6">
+                                <input type="datetime-local" wire:model="tanggal" class="form-control">
+                                @error('tanggal')
+                                    <span class="error text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <input type="file" wire:model="sk" class="form-control" placeholder="sk">
+                                @error('sk')
+                                    <span class="error text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <input type="number" wire:model="jumlah" class="form-control" placeholder="Jumlah">
+                                @error('jumlah')
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="col-md-12">
-                                <input type="email" wire:model="email" class="form-control"
-                                    placeholder="asda@asda.com">
-                                @error('email')
+                                <input type="keterangan" wire:model="keterangan" class="form-control"
+                                    placeholder="Keterangan">
+                                @error('keterangan')
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="col-md-12">
-                                <input type="password" wire:model="password" class="form-control" placeholder="{{ __('Password') }}">
-                                @error('password')
-                                    <span class="error text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" wire:model="role" class="form-control"
-                                    placeholder="0 or 1">
-                                @error('role')
+                                <select class="form-select form-select-sm" wire:model="status"
+                                    aria-label=".form-select-sm example">
+                                    <option selected>Proses</option>
+                                    <option value="Proses">Proses</option>
+                                    <option value="Konfirmasi">Konfirmasi</option>
+                                    <option value="Tolak">Tolak</option>
+                                </select>
+                                @error('status')
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -72,24 +83,24 @@
         </div>
     </div>
 </div>
-<!-- End Modal create stok darah -->
+<!-- End Modal create trsansaksi -->
 
-<!-- Modal update stok darah -->
-<div wire:ignore.self class="modal fade" id="updatemasyarakatModal" tabindex="-1"
-    aria-labelledby="updatemasyarakatModalLabel" aria-hidden="true">
+<!-- Modal update trsansaksi -->
+<div wire:ignore.self class="modal fade" id="updatetransaksiModal" tabindex="-1"
+    aria-labelledby="updatetransaksiModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="updatemasyarakatModalLabel">Modal Stok Darah</h1>
+                <h1 class="modal-title fs-5" id="updatetransaksiModalLabel">Modal Trsansaksi</h1>
                 <button type="button" class="btn-close" wire:click="closemodal" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Modal Update Stok darah</h5>
+                        <h5 class="card-title text-center">Modal Update Trsansaksi</h5>
                         <!-- No Labels Form -->
-                        <form class="row g-3" wire:submit.prevent="updatemasyarakat">
+                        <form class="row g-3" wire:submit.prevent="updatetransaksi">
                             <div class="col-md-12">
                                 <input type="text" wire:model="name" class="form-control" placeholder="Nama Lengkap">
                                 @error('name')
@@ -109,29 +120,40 @@
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="col-md-12">
-                                <input type="text" wire:model="alamat" class="form-control" placeholder="alamat">
-                                @error('alamat')
+                            <div class="col-md-6">
+                                <input type="datetime-local" wire:model="tanggal" class="form-control">
+                                @error('tanggal')
+                                    <span class="error text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <input type="file" wire:model="sk" class="form-control" placeholder="sk">
+                                @error('sk')
+                                    <span class="error text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <input type="number" wire:model="jumlah" class="form-control" placeholder="Jumlah">
+                                @error('jumlah')
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="col-md-12">
-                                <input type="email" wire:model="email" class="form-control"
-                                    placeholder="asda@asda.com">
-                                @error('email')
+                                <input type="keterangan" wire:model="keterangan" class="form-control"
+                                    placeholder="Keterangan">
+                                @error('keterangan')
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="col-md-12">
-                                <input type="password" wire:model="password" class="form-control" placeholder="{{ __('Password') }}">
-                                @error('password')
-                                    <span class="error text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" wire:model="role" class="form-control"
-                                    placeholder="0 or 1">
-                                @error('role')
+                                <select class="form-select form-select-sm" wire:model="status"
+                                    aria-label=".form-select-sm example">
+                                    <option selected>Proses</option>
+                                    <option value="Proses">Proses</option>
+                                    <option value="Konfirmasi">Konfirmasi</option>
+                                    <option value="Tolak">Tolak</option>
+                                </select>
+                                @error('status')
                                     <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -148,24 +170,24 @@
         </div>
     </div>
 </div>
-<!-- End Modal update stok darah -->
+<!-- End Modal update trsansaksi -->
 
-<!-- Modal delete stok darah -->
-<div wire:ignore.self class="modal fade" id="deletemasyarakatModal" tabindex="-1"
-    aria-labelledby="deletemasyarakatModalLabel" aria-hidden="true">
+<!-- Modal delete trsansaksi -->
+<div wire:ignore.self class="modal fade" id="deletetransaksiModal" tabindex="-1"
+    aria-labelledby="deletetransaksiModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="deletemasyarakatModalLabel">Modal Stok Darah</h1>
+                <h1 class="modal-title fs-5" id="deletetransaksiModalLabel">Modal Trsansaksi</h1>
                 <button type="button" class="btn-close" wire:click="closemodal" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Modal Update Stok darah</h5>
+                        <h5 class="card-title text-center">Modal Delete trsansaksi</h5>
                         <!-- No Labels Form -->
-                        <form class="row g-3" wire:submit.prevent="destroymasyarakat">
+                        <form class="row g-3" wire:submit.prevent="destroytransaksi">
 
                     </div>
                 </div>
@@ -179,4 +201,4 @@
         </div>
     </div>
 </div>
-<!-- End Modal Delete stok darah -->
+<!-- End Modal Delete trsansaksi -->

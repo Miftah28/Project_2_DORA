@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DatadonorController;
 use App\Http\Controllers\StokdarahController;
 use App\Http\Controllers\MasyarakatController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('nik');
             $table->integer('notelp');
+            $table->dateTime('tanggal');
             $table->string('sk');
             $table->integer('jumlah');
             $table->string('keterangan');

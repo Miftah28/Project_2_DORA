@@ -6,7 +6,7 @@
         </div>
     @endif
     @include('livewire.donordarah.modalKegiatan')
-    <div class="card-body">
+    <div class="card-body overflow-auto">
         <h1 class="card-title text-center">KEGIATAN</h1>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary text-center mb-2" data-bs-toggle="modal"
