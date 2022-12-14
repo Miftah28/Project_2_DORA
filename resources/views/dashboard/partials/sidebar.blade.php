@@ -15,12 +15,12 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{url('kegiatan')}}">
+                    <a class="nav-link {{ request()->is('kegiatan' ) ? 'active' : 'collapsed' }} " href="{{url('kegiatan')}}">
                         <i class="bi bi-circle"></i><span>Kegitaan</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('datadonor')}}">
+                    <a class="nav-link {{ request()->is('datadonor' ) ? 'active' : 'collapsed' }}" href="{{url('datadonor')}}">
                         <i class="bi bi-circle"></i><span>Data Donor</span>
                     </a>
                 </li>
@@ -45,6 +45,13 @@
             <a class="nav-link {{ request()->is('transaksi') ? 'active' : 'collapsed' }}" href="transaksi">
                 <i class='bx bxs-wallet'></i>
                 <span>Transaksi</span>
+            </a>
+        </li><!-- End Transaksi Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link {{ request()->is('laporan') ? 'active' : 'collapsed' }}" href="laporan">
+                <i class='bx bxs-file-blank'></i>
+                <span>Laporan</span>
             </a>
         </li><!-- End Transaksi Nav -->
 

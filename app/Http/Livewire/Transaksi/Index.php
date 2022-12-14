@@ -43,16 +43,26 @@ class Index extends Component
         // $filename = time() . '.' . $sk->getClientOriginalExtension();
         // $request->sk->move('assets', $filename);
         $validatedData = $this->validate();
-        $sk = $this->sk->store('public/assets/img');
-        Transaksi::create($validatedData,[
-            'nama' => $validatedData['nama'],
-            'nik' => $validatedData['nik'],
-            'notelp' => $validatedData['notelp'],
-            'tanggal' => $validatedData['tanggal'],
+        $sk = $this->sk->store('img','public');
+        // Transaksi::create($validatedData,[
+        //     'nama' => $validatedData['nama'],
+        //     'nik' => $validatedData['nik'],
+        //     'notelp' => $validatedData['notelp'],
+        //     'tanggal' => $validatedData['tanggal'],
+        //     'sk' => $validatedData[$sk],
+        //     'jumlah' => $validatedData['jumlah'],
+        //     'keterangan' => $validatedData['keterangan'],
+        //     'status' => $validatedData['status'],
+        // ]);
+        Transaksi::create([
+            'nama' => $this->nama,
+            'nik' => $this->nik,
+            'notelp' => $this->notelp,
+            'tanggal' => $this->tanggal,
             'sk' => $sk,
-            'jumlah' => $validatedData['jumlah'],
-            'keterangan' => $validatedData['keterangan'],
-            'status' => $validatedData['status'],
+            'jumlah' => $this->jumlah,
+            'keterangan' => $this->keterangan,
+            'status' => $this->status,
         ]);
         Session()->flash('message', 'Transaksi added successfully');
         $this->dispatchBrowserEvent('close-modal');

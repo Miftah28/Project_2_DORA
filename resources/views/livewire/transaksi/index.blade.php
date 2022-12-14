@@ -8,7 +8,7 @@
         </div>
     @endif
     @include('livewire.transaksi.modal')
-    <div class="card-body overflow-auto" >
+    <div class="card-body overflow-visible" >
         <h1 class="card-title text-center">TRANSAKSI</h1>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary text-center mb-2" data-bs-toggle="modal"
@@ -41,7 +41,7 @@
                         <td class="text-center">{{ $transaksi->nik }}</td>
                         <td class="text-center">{{ $transaksi->notelp }}</td>
                         <td class="text-center">{{ $transaksi->tanggal }}</td>
-                        <td class="text-center">{{ $transaksi->sk }}</td>
+                        <td class="text-center"><iframe src="{{ asset('storage') }}/{{ $transaksi->sk }}" height="400"  width="400" ></iframe></td>
                         <td class="text-center">{{ $transaksi->jumlah }}</td>
                         <td class="text-center">{{ $transaksi->keterangan }}</td>
                         <td class="text-center">{{ $transaksi->status }}</td>
@@ -55,11 +55,12 @@
                                 class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletetransaksiModal">
                                 <i class="bi bi-trash2"></i>
                             </button>
+                            <button type="button" class="btn btn-secondary"><i class="bi bi-printer"></i></button>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td class="text-center" colspan="8">No Record Found</td>
+                        <td class="text-center" colspan="10">No Record Found</td>
                     </tr>
                 @endforelse
             </tbody>

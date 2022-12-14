@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\api\ApiStokdarahController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DatadonorController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\StokdarahController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\TransaksiController;
@@ -36,8 +38,13 @@ Route::middleware(['auth', 'user-role:admin'])->group(function(){
     Route::get('datadonor',[ DatadonorController::class, 'index']);
     Route::get('masyarakat',[ MasyarakatController::class, 'index']);
     Route::get('transaksi',[ TransaksiController::class, 'index']);
+    Route::get('laporan',[ LaporanController::class, 'index']);
 });
 
 Route::middleware(['auth', 'user-role:masyarakat'])->group(function(){
     Route::get("/home",[HomeController::class,'masyarakatHome'])->name('home');
 });
+
+
+//API ROUTES
+Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
