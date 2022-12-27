@@ -1,5 +1,3 @@
-
-
 <div class="card">
     @if (session()->has('message'))
         <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
@@ -8,7 +6,7 @@
         </div>
     @endif
     @include('livewire.transaksi.modal')
-    <div class="card-body overflow-visible" >
+    <div class="card-body overflow-visible">
         <h1 class="card-title text-center">TRANSAKSI</h1>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary text-center mb-2" data-bs-toggle="modal"
@@ -18,7 +16,7 @@
         <input type="search" class="form-control float-end mx-2" wire:model="search" placeholder="Search..."
             style="width: 230px">
         <!-- Bordered Table -->
-        <table class="table table-bordered" >
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th class="text-center" scope="col">No</th>
@@ -41,7 +39,10 @@
                         <td class="text-center">{{ $transaksi->nik }}</td>
                         <td class="text-center">{{ $transaksi->notelp }}</td>
                         <td class="text-center">{{ $transaksi->tanggal }}</td>
-                        <td class="text-center"><iframe src="{{ asset('storage') }}/{{ $transaksi->sk }}" height="400"  width="400" ></iframe></td>
+                        <td class="text-center">
+                            <iframe src="{{ asset('storage') }}/{{ $transaksi->sk }}" height="250"
+                                width="250"></iframe>
+                        </td>
                         <td class="text-center">{{ $transaksi->jumlah }}</td>
                         <td class="text-center">{{ $transaksi->keterangan }}</td>
                         <td class="text-center">{{ $transaksi->status }}</td>

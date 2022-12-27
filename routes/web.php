@@ -31,20 +31,22 @@ Route::get('/', function () {
 
 Auth::routes();
 //admin routes
-Route::middleware(['auth', 'user-role:admin'])->group(function(){
-    Route::get("dashboard",[DashboardController::class,'adminHome'])->name('home.admin');
-    Route::get('stokdarah',[ StokdarahController::class, 'index']);
-    Route::get('kegiatan',[ KegiatanController::class, 'index']);
-    Route::get('datadonor',[ DatadonorController::class, 'index']);
-    Route::get('masyarakat',[ MasyarakatController::class, 'index']);
-    Route::get('transaksi',[ TransaksiController::class, 'index']);
-    Route::get('laporan',[ LaporanController::class, 'index']);
+Route::middleware(['auth', 'user-role:admin'])->group(function () {
+    Route::get("dashboard", [DashboardController::class, 'adminHome'])->name('home.admin');
+    Route::get('stokdarah', [StokdarahController::class, 'index']);
+    Route::get('kegiatan', [KegiatanController::class, 'index']);
+    Route::get('datadonor', [DatadonorController::class, 'index']);
+    Route::get('masyarakat', [MasyarakatController::class, 'index']);
+    Route::get('transaksi', [TransaksiController::class, 'index']);
+    Route::get('laporan', [LaporanController::class, 'index']);
+    Route::get('pdfdonordarah', [LaporanController::class, 'pdfdonordarah'])->name('datadonor.pdf');
+    Route::get('pdfstokdarah', [LaporanController::class, 'pdfstokdarah'])->name('stokdarah.pdf');
+    Route::get('pdftransaksi', [LaporanController::class, 'pdftransaksi'])->name('transaksi.pdf');
 });
 
-Route::middleware(['auth', 'user-role:masyarakat'])->group(function(){
-    Route::get("/home",[HomeController::class,'masyarakatHome'])->name('home');
+Route::middleware(['auth', 'user-role:masyarakat'])->group(function () {
+    Route::get("/home", [HomeController::class, 'masyarakatHome'])->name('home');
 });
 
 
-//API ROUTES
-Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
+Route::get('/api/stokdarah', [ApiStokdarahController::class, 'index']);

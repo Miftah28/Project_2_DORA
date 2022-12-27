@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\api\ApiStokdarahController;
+use App\Http\Controllers\api\ApiUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//API ROUTES
+Route::post('/auth/register', [ApiUserController::class, 'register']);
+Route::post('/auth/login', [ApiUserController::class, 'login']);
+Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
+Route::get('/api/donordarah',[ApiDonordarahController::class, 'index']);
+Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
+Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
+Route::get('/api/transaksi',[ApiStokdarahController::class, 'index']);
