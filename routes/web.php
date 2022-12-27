@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ApiKegiatanController;
 use App\Http\Controllers\api\ApiStokdarahController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -50,3 +51,4 @@ Route::middleware(['auth', 'user-role:masyarakat'])->group(function () {
 
 
 Route::get('/api/stokdarah', [ApiStokdarahController::class, 'index']);
+Route::get('/api/kegiatan',[ApiKegiatanController::class, 'index']);

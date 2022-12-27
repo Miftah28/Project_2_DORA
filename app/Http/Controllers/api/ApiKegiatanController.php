@@ -3,18 +3,20 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Datadonor;
+use App\Models\kegiatan;
 use Illuminate\Http\Request;
 
 class ApiKegiatanController extends Controller
 {
-    public function index()
+    public function lihat()
     {
-        $datadonor = Datadonor::all();
-        return response()->json([
-            'success' => true,
-            'message' => 'List Semua stok darah',
-            'data' => $datadonor
-        ], 200);
+        // $kegiatan = kegiatan::all();
+        // return response()->json([
+        //     'success' => true,
+        //     'message' => 'List Semua Kegiatan',
+        //     'data' => $kegiatan
+        // ]);
+        
+        return "selamat";
     }
 }

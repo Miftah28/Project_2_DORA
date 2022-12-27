@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ApiKegiatanController;
 use App\Http\Controllers\api\ApiStokdarahController;
 use App\Http\Controllers\api\ApiUserController;
 use Illuminate\Http\Request;
@@ -24,5 +25,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/auth/register', [ApiUserController::class, 'register']);
 Route::post('/auth/login', [ApiUserController::class, 'login']);
 Route::get('/stokdarah',[ApiStokdarahController::class, 'index']);
-Route::get('/donordarah',[ApiKegiatanController::class, 'index']);
-Route::get('/transaksi',[ApiStokdarahController::class, 'index']);
+Route::get('api/kegiatan', [ApiKegiatanController::class, 'lihat']);
+Route::get('/transaksi',[ApiTransaksiController::class, 'index']);
