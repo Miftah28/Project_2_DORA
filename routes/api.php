@@ -23,8 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //API ROUTES
 Route::post('/auth/register', [ApiUserController::class, 'register']);
 Route::post('/auth/login', [ApiUserController::class, 'login']);
-Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
-Route::get('/api/donordarah',[ApiDonordarahController::class, 'index']);
-Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
-Route::get('/api/stokdarah',[ApiStokdarahController::class, 'index']);
-Route::get('/api/transaksi',[ApiStokdarahController::class, 'index']);
+Route::get('/stokdarah',[ApiStokdarahController::class, 'index']);
+Route::get('/donordarah',[ApiKegiatanController::class, 'index']);
+Route::get('/transaksi',[ApiStokdarahController::class, 'index']);

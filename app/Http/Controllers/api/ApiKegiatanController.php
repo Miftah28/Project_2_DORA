@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Stokdarah;
+use App\Models\Datadonor;
 use Illuminate\Http\Request;
 
-class ApiStokdarahController extends Controller
+class ApiKegiatanController extends Controller
 {
     public function index()
     {
-        $stokdarah = Stokdarah::all();
+        $datadonor = Datadonor::all();
         return response()->json([
             'success' => true,
             'message' => 'List Semua stok darah',
-            'data' => $stokdarah
+            'data' => $datadonor
         ], 200);
     }
 }
